@@ -1,0 +1,20 @@
+#new collatz
+def collatz(n):
+    if n<0:
+        return(" F U ")
+    elif n%2==0:
+        return(n//2)
+    elif n%2==1:
+        return(3*n+1)
+
+try:
+    n=int(input("请输入正整数："))
+    while n!=1:
+        print(collatz(n))
+        n=collatz(n)
+except ValueError:
+        print(" F U ")
+except TypeError:
+        print(" F U ")
+
+input()
